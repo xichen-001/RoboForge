@@ -177,7 +177,7 @@
     "url": "https://xichen-001.github.io/RoboForge/",
     "image": "https://xichen-001.github.io/RoboForge/static/images/social_preview.png",
     "keywords": ["humanoid locomotion", "text-guided motion", "physics optimization", "retarget-free control", "diffusion models", "reinforcement learning", "robotics"],
-    "abstract": "While generative models have become effective at producing human-like motions from text descriptions, transferring these motions to humanoid robots for physical execution remains a major challenge. Existing pipelines are often fractured by the retargeting bottleneck, where kinematic elegance is compromised by physical infeasibility, contact-transition errors, and the prohibitive cost of real-world dynamical data. We present a unified, latent-driven framework that bridges the gap between natural language and whole-body locomotion through a retarget-free and physics-optimized pipeline. Rather than treating generation and control as disconnected steps, our core insight lies in their bidirectional coupling, where both steps are optimized jointly subject to physical constraints. We introduce the Physical Plausibility Optimization (PP-Opt) module as a coupled interface. In the forward direction, it refines a teacher-student distillation policy using a plausibility-centric reward to suppress non-physical artifacts such as floating, skating and penetration; in the backward direction, PP-Opt converts reward-optimized simulation rollouts into high-quality explicit motion data, which is then used to fine-tune the motion generator so that it learns a more physically plausible latent distribution. The bidirectional design establishes a self-improving cycle, where the generator learns to encode motion within a physically grounded latent space, while the controller learns to execute latent-conditioned behaviors with dynamical integrity. Extensive experiments on the Unitree G1 humanoid validate that our bidirectional optimization yields gains in tracking errors and success rates. Across IsaacLab and MuJoCo, our implicit latent-driven approach consistently outperforms conventional explicit retargeting pipelines in both precision and stability. By coupling the imagination of diffusion models with physical plausibility optimization, our work offers a robust path toward deployable, text-guided humanoid intelligence.",
+    "abstract": "While generative models have become effective at producing human-like motions from text, transferring these motions to humanoid robots for physical execution remains challenging. Existing pipelines are often limited by retargeting, where kinematic quality is undermined by physical infeasibility, contact-transition errors, and the high cost of real-world dynamical data. We present a unified latent-driven framework that bridges natural language and whole-body humanoid locomotion through a retarget-free, physics-optimized pipeline. Rather than treating generation and control as separate stages, our key insight is to couple them bidirectionally under physical introduce a Physical Plausibility Optimization (PP-Opt) module as the coupling interface. In the forward direction, PP-Opt refines a teacher-student distillation policy with a plausibility-centric reward to suppress artifacts such as floating, skating, and penetration. In the backward direction, it converts reward-optimized simulation rollouts into high-quality explicit motion data, which is used to fine-tune the motion generator toward a more physically plausible latent distribution. This bidirectional design forms a self-improving cycle: the generator learns a physically grounded latent space, while the controller learns to execute latent-conditioned behaviors with dynamical experiments on the Unitree G1 humanoid show that our bidirectional optimization improves tracking accuracy and success rates. Across IsaacLab and MuJoCo, the implicit latent-driven pipeline consistently outperforms conventional explicit retargeting baselines in both precision and stability. By coupling diffusion-based motion generation with physical plausibility optimization, our framework provides a practical path toward deployable text-guided humanoid intelligence.",
     "citation": "@article{yuan2026roboforge, title={RoboForge: Physically Optimized Text-guided Whole-Body Locomotion for Humanoids}, author={Yuan, Xichen and Li, Zhe and Lyu, Bofan and Zuo, Kuangji and Lu, Yanshuo and Li, Gen and Yang, Jianfei}, journal={arXiv preprint arXiv:2603.17927}, year={2026}, url={https://arxiv.org/abs/2603.17927}}",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -331,6 +331,23 @@
 <!-- End teaser image -->
 
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While generative models have become effective at producing human-like motions from text, transferring these motions to humanoid robots for physical execution remains challenging. Existing pipelines are often limited by retargeting, where kinematic quality is undermined by physical infeasibility, contact-transition errors, and the high cost of real-world dynamical data. We present a unified latent-driven framework that bridges natural language and whole-body humanoid locomotion through a retarget-free, physics-optimized pipeline. Rather than treating generation and control as separate stages, our key insight is to couple them bidirectionally under physical introduce a Physical Plausibility Optimization (PP-Opt) module as the coupling interface. In the forward direction, PP-Opt refines a teacher-student distillation policy with a plausibility-centric reward to suppress artifacts such as floating, skating, and penetration. In the backward direction, it converts reward-optimized simulation rollouts into high-quality explicit motion data, which is used to fine-tune the motion generator toward a more physically plausible latent distribution. This bidirectional design forms a self-improving cycle: the generator learns a physically grounded latent space, while the controller learns to execute latent-conditioned behaviors with dynamical experiments on the Unitree G1 humanoid show that our bidirectional optimization improves tracking accuracy and success rates. Across IsaacLab and MuJoCo, the implicit latent-driven pipeline consistently outperforms conventional explicit retargeting baselines in both precision and stability. By coupling diffusion-based motion generation with physical plausibility optimization, our framework provides a practical path toward deployable text-guided humanoid intelligence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -348,23 +365,6 @@
   </div>
 </section>
 <!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            While generative models have become effective at producing human-like motions from text descriptions, transferring these motions to humanoid robots for physical execution remains a major challenge. Existing pipelines are often fractured by the retargeting bottleneck, where kinematic elegance is compromised by physical infeasibility, contact-transition errors, and the prohibitive cost of real-world dynamical data. We present a unified, latent-driven framework that bridges the gap between natural language and whole-body locomotion through a retarget-free and physics-optimized pipeline. Rather than treating generation and control as disconnected steps, our core insight lies in their bidirectional coupling, where both steps are optimized jointly subject to physical constraints. We introduce the Physical Plausibility Optimization (PP-Opt) module as a coupled interface. In the forward direction, it refines a teacher-student distillation policy using a plausibility-centric reward to suppress non-physical artifacts such as floating, skating and penetration; in the backward direction, PP-Opt converts reward-optimized simulation rollouts into high-quality explicit motion data, which is then used to fine-tune the motion generator so that it learns a more physically plausible latent distribution. The bidirectional design establishes a self-improving cycle, where the generator learns to encode motion within a physically grounded latent space, while the controller learns to execute latent-conditioned behaviors with dynamical integrity. Extensive experiments on the Unitree G1 humanoid validate that our bidirectional optimization yields gains in tracking errors and success rates. Across IsaacLab and MuJoCo, our implicit latent-driven approach consistently outperforms conventional explicit retargeting pipelines in both precision and stability. By coupling the &quot;imagination&quot; of diffusion models with physical plausibility optimization, our work offers a robust path toward deployable, text-guided humanoid intelligence.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
 
 
 <!-- Framework image -->
@@ -449,3 +449,5 @@
 
   </body>
   </html>
+
+
